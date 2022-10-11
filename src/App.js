@@ -1,13 +1,11 @@
 import React from "react";
 import "./App.css";
+import Header from "./components/Header/Header";
 
 function App() {
-  React.useEffect(() => tg.ready(), []);
-
-  
   return (
     <div className="App">
-      <button onClick={onClose}>Close</button>
+      <Header />
     </div>
   );
 }
