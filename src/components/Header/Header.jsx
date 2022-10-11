@@ -8,7 +8,8 @@ const Header = (props) => {
   };
   return (
     <div className="header">
-      <Button onClick={onClose}>Закры12ть</Button>
+      <Button onClick={onClose}>Закры13242342424242ть</Button>
+      <Button onClick={onClose}>Закры13242342424242ть</Button>
       <span className="username">{tg.initDataUnsafe?.user?.username}</span>
     </div>
   );
