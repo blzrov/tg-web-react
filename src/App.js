@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import "./App.css";
 import useTelegram from "./hooks/useTelegram";
+import "./App.css";
 import Header from "./components/Header/Header";
 
 function App() {
-  const { onToggleButton, tg } = useTelegram();
+  const { tg, onToggleButton } = useTelegram();
 
   useEffect(() => {
     tg.ready();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, []);
 
   return (
