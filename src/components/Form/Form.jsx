@@ -4,7 +4,7 @@ import "./Form.css";
 
 const Form = () => {
   const { tg } = useTelegram();
-  
+
   const [country, setCountry] = useState("");
   const [street, setStreet] = useState("");
   const [subject, setSubject] = useState("physical");
@@ -16,6 +16,7 @@ const Form = () => {
       subject,
     };
     tg.sendData(JSON.stringify(data));
+    // eslint-disable-next-line
   }, [country, street, subject]);
 
   useEffect(() => {
@@ -23,12 +24,14 @@ const Form = () => {
     return () => {
       tg.offEvent("mainButtonClicked", onSendData);
     };
+    // eslint-disable-next-line
   }, [onSendData]);
 
   useEffect(() => {
     tg.MainButton.setParams({
       text: "Отправить данные",
     });
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -37,6 +40,7 @@ const Form = () => {
     } else {
       tg.MainButton.show();
     }
+    // eslint-disable-next-line
   }, [country, street]);
 
   const onChangeCountry = (e) => {
